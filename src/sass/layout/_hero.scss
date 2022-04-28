@@ -1,0 +1,59 @@
+/* Big heading */
+
+@media (min-width: 992px) {
+  #page-heading {
+    margin-left: 20px;
+    left: 0;
+    top: 0; 
+    padding-top: 3rem;
+    padding-right: 0rem;
+    position: absolute;
+    width: calc(50vw - 20px);
+    padding-right: 1.6rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .heading-container  {
+    padding-right: calc(100vw / 5);
+    /* margin: 10px, 24px, 0px, 0px; */
+    /* background-color: red; */
+    /* height: auto;
+    margin-right: 2rem; */
+  }
+}
+@media  (max-width: 992px) {
+  #page-heading {
+    margin-bottom: 3rem;
+    margin-right: 1.2rem;
+    background-color: lightcoral;
+  }
+}
+
+/* Lead Intro */
+
+#page-intro.lead {
+  font-size: 1.4rem;
+  color:#383434;
+  font-weight: 400;
+  padding-left: 1rem;
+}
+
+@media (min-width: 1200px) {
+  #page-intro  {
+    /* padding-right: calc(100vw / 5); */
+    /* margin: 10px, 24px, 0px, 0px; */
+    /* background-color: red; */
+    height: auto;
+    display: block;
+    /* margin-right: 2rem; */
+    
+  }
+}
+@media (max-width: 992px) {
+  #page-intro  {
+    margin-right: 1.2rem;
+    background-color: lightblue;
+  }
+}    

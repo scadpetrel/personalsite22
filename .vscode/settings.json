@@ -1,0 +1,31 @@
+{
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.iconTheme": "eq-material-theme-icons-palenight",
+  "editor.bracketPairColorization.enabled": true,
+  "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+  
+
+      {
+          "format": "compressed",
+          "extensionName": ".css",
+          "savePath": "/public"
+      }
+  ],
+  "emmet.includeLanguages": {
+      "nunjucks": "html"
+    }
+  
+}

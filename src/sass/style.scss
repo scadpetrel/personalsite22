@@ -1,0 +1,69 @@
+@import "layout/footer";
+@import "layout/nav";
+@import "layout/hero";
+@import "layout/content";
+@import "variables";
+/* font-family: 'IBM Plex Sans', sans-serif; */
+
+
+/* ---- Base Styles ---- */
+/* #limit {
+  max-width: 1700px;
+} */
+html {
+  background-color: #edf2f4ff;
+  font-family: 'IBM Plex Sans', sans-serif;
+  scroll-behavior: auto;
+}
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #383434;
+  background-color: #edf2f4;
+}
+
+a {
+  color: #383434;
+  text-decoration: underline;
+  text-decoration-color: #d90429ff;
+}
+
+a:hover {
+  color: #d90429ff;
+}
+
+a:focus {
+  color: #ef233cff;;
+}
+#primary-container.container-fluid {
+  /* max-width: 1450px; */
+  background-color: #add8e6;
+}
+
+.heading-button, .btn-outline-primary {
+  border-color: #d90429ff;
+  color: #d90429ff;
+}
+
+.heading-button:hover, .btn-outline-primary:hover {
+  background-color: #ef233cff;
+  transition: .6s;
+}
+
+.btn-outline-primary:focus {
+    border: 0;
+    box-shadow: 0 0 0 0.25rem #2b2d42;
+  }
+
+.badge-tag {
+  background-color: #8d99aeff;
+  border-radius: 0%;
+}
+
+h1.display-3 {
+  font-weight: 400;
+}
+
+
+
+
+
