@@ -1,0 +1,30 @@
+<section class="row">
+  
+                  <h2 id="projects-heading" class="my-5 section-heading">Projects</h2>
+                  {% for project in collections.portfolio %}
+                  {% if project.data.position === "right" %}
+                  <div class="row project-block d-flex flex-wrap mb-5">
+                    <div class="col-lg-5 col-xl-6 order-md-1">
+                      <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}" />
+                    </div>
+                    <article class="col-lg-7 col-xl-6 order-md-2">
+                      <h4>{{ project.data.title }}</h4>
+                      {{ project.data.content | safe }}
+                      <div class="tags"><span class="badge badge-tag mt-2">{{project.data.group}}</span></div>
+                    </article>
+                  </div>
+                  <!-- section break -->
+                  {% else%}
+                  <section class="row project-block d-flex flex-wrap mb-5">
+                    <article class="col-lg-7 col-xl-6 order-2  order-xl-1">
+                      <h4>{{ project.data.title }}</h4>
+                    {{ project.data.content | safe }}
+                      <div class="tags"><span class="badge badge-tag mt-2">Primary</span></div>
+                    </article>
+                    <div class="col-lg-5 col-xl-6 order-1 order-xl-2">
+                       <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}" />
+                    </div>
+                  </section>
+                  {%endif%}
+                  {%endfor%}
+                </section>

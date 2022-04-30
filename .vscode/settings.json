@@ -21,7 +21,7 @@
       {
           "format": "compressed",
           "extensionName": ".css",
-          "savePath": "/public"
+          "savePath": "/src/css"
       }
   ],
   "emmet.includeLanguages": {

@@ -268,7 +268,7 @@
     "start": "eleventy --serve",
     "build": "eleventy" 
   },
-  "author": "",
+  "author": "Sean",
   "license": "ISC",
   "description": ""
 }

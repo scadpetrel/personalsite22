@@ -1,0 +1,7 @@
+ <article class="row">
+              <img src="imgs/538674774.241576-scaled.jpg" alt="flattened 360 image">
+             {%- for about in collections.about -%}
+             <h2 class="my-5 section-heading" id="about-heading">{{about.data.title}}</h1>
+              {{ about.data.content | safe}}
+             {%endfor%}
+             </article>

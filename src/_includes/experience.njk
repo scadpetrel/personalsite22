@@ -1,0 +1,18 @@
+<article class="row">
+  <h2 class="my-5 section-heading">Experience</h2>
+
+  {% for experience in collections.experience %}
+    <div class="col-lg-5 col-xl-6">
+      <!-- d-flex justify-content-lg-end -->
+      <p class="text-lg-end mb-0">
+        <strong>{{ experience.data.title }}</strong>
+      </p>
+      <p class="text-lg-end text-muted">{{ experience.data.subheading }}</p>
+    </div>
+    <div class="col-lg-7 col-xl-6">
+      {{ experience.data.content | safe }}
+    </div>
+
+  {% endfor %}
+
+</article>

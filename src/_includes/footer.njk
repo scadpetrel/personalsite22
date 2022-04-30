@@ -1,0 +1,39 @@
+<h2 id="contact-heading" class="my-5 section-heading mb-4">Contact</h2>
+                  <footer>
+                    <div class="icons"><a href="https://www.linkedin.com/in/spathasema"><i
+                          class="fa-brands fa-linkedin social-icons"></i></a><a href="https://github.com/scadpetrel"><i
+                          class="fa-brands fa-github social-icons"></i></a>
+                      <div data-bs-toggle="modal" data-bs-target="#contactModal"><i
+                          class="fa-solid fa-envelope social-icons"></i></div>
+                      <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content p-5">
+                            <h4>Send Me a Message</h4>
+                            <form class="" method="post" action="https://api.staticforms.xyz/submit">
+                              <input type="hidden" name="accessKey" value="46af21fc-d870-4837-85e8-430364140e9b">
+                              <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                  placeholder="name@example.com">
+                              </div>
+                              <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="John Doe">
+                              </div>
+                              <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"
+                                  placeholder="Write your message here."></textarea>
+                              </div>
+                              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-outline-primary email-button"
+                                type="submit">Send</button>
+                              <input type="hidden" name="redirectTo" value="https://dev.pathasema.com">
+                              <!-- <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small> -->
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p id="copyright">&copy; 2022 {{ meta.siteName }}</p>
+                  </footer>
