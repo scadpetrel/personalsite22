@@ -1,6 +1,6 @@
 ---
 title: "Sean Pathasema"
-tags: home
+tags: hero
 layout: "home-header.njk"
 ---
 
