@@ -3,38 +3,39 @@ title: "sean pathasema"
 layout: "base.njk"
 tag: nothome
 ---
-{% include "home-header.njk" %}
-<!-- core conent area container -->
-<main id="content-container" class="container">
-  <div id="page-heart" class="section">
-    <div class="section ">
-      <!-- MOVE IMAGE OUT OF ABOUT AND PUT HERE -->
+
+      <img class="full-width" src="imgs/538674774.241576-scaled.jpg" alt="flattened 360 image">
       <!-- full width blog -->
       {% if collections.about.length %}
-      {% include "about.njk" %}
+        {# {% include "about.njk" %} #}
+      
+        {%- for about in collections.about -%}
+        <article class="row">
+        <h2 class="my-5 section-heading" id="about-heading">{{about.data.title}}</h2>
+        <p>{{about.data.description | safe}}</p>
+        <a href="{{about.url}}">Read More</a>
+        </article>
+        {% endfor %}
+
       {% endif %}
       <!-- end full width blog -->
 
       <!-- experience section -->
       {% if collections.experience.length %}
-      {% include "experience.njk" %}
+        {% include "experience.njk" %}
       {%endif%}
       <!-- end experience section -->
 
       <!-- projects section -->
       {% if collections.portfolio.length %}
-      {% include "projects.njk" %}
+        {% include "projects.njk" %}
       {% endif %}
         <!-- end projects section -->
         
         <!-- end footer row -->
         <section class="row">
           <!-- footer section -->
-          {%include "footer.njk"%}
+          {%include "partials/footer.njk"%}
           <!-- end footer section -->
         </section>
         <!-- end footer row -->
-      </div>
-    </div>
-    <!-- end core content -->
-  </main>

@@ -1,7 +1,25 @@
- <article class="row">
-              <img src="imgs/538674774.241576-scaled.jpg" alt="flattened 360 image">
-             {%- for about in collections.about -%}
-             <h2 class="my-5 section-heading" id="about-heading">{{about.data.title}}</h1>
-              {{ about.data.content | safe }}
-             {%endfor%}
-             </article>
+---
+layout: "base.njk"
+---
+<article class="row">
+
+  {%- for about in collections.about -%}
+    <h2 class="my-5 section-heading" id="about-heading">{{about.data.title}}</h1>
+    {{ about.data.content | safe }}
+    {%endfor%}
+    {# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a risus malesuada, blandit orci non, consectetur velit. Vestibulum gravida mauris dolor, at varius dui accumsan in. Maecenas aliquam accumsan nisi nec scelerisque. Maecenas nec lobortis nisi. Aenean lobortis vitae libero in suscipit. Morbi gravida in erat vel efficitur. Pellentesque porttitor, dui rhoncus elementum ullamcorper, metus tortor ultrices quam, sit amet commodo turpis ex id sem. Donec non ante tempor, porttitor ex sed, hendrerit quam. Integer id sagittis mauris. Quisque euismod enim sed erat aliquam vehicula. Cras suscipit arcu et nisi suscipit elementum in nec libero. In eu fringilla mi, imperdiet consectetur nisi. Aliquam sollicitudin rhoncus erat at egestas. Donec scelerisque nulla et arcu suscipit, nec sagittis massa aliquet. #}
+    {# Integer aliquam vestibulum maximus. Fusce eu massa eget nibh gravida tempus ut quis neque. Aliquam a ornare urna, nec venenatis quam. Proin pulvinar faucibus odio sed ultrices. Aliquam erat volutpat. Proin et tortor aliquam, finibus turpis sed, mollis ex. Donec nec eros lacus. Quisque dictum metus nec arcu placerat euismod. Pellentesque quis dignissim dui. Quisque nec libero ligula. #}
+     <h2 class="my-5 section-heading">Experience</h2>
+    {% for experience in collections.experience %}
+      <div class="col-lg-5 col-xl-6">
+        <!-- d-flex justify-content-lg-end -->
+        <p class="text-lg-end mb-0">
+          <strong>{{ experience.data.title }}</strong>
+        </p>
+        <p class="text-lg-end text-muted">{{ experience.data.subheading }}</p>
+      </div>
+      <div class="col-lg-7 col-xl-6">
+        {{ experience.data.content | safe }}
+      </div>
+    {% endfor %}
+  </article>

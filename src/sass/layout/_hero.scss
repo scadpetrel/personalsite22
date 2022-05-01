@@ -1,4 +1,4 @@
-@import "./variables";
+// @import "variables";
 /* Big heading */
 
 @media (min-width: 992px) {
@@ -29,7 +29,7 @@
   #page-heading {
     margin-bottom: 3rem;
     margin-right: 1.2rem;
-    background-color: lightcoral;
+    // background-color: lightcoral;
   }
 }
 
@@ -56,6 +56,6 @@
 @media (max-width: 992px) {
   #page-intro  {
     margin-right: 1.2rem;
-    background-color: lightblue;
+    // background-color: lightblue;
   }
 }    
