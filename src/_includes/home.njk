@@ -1,41 +1,78 @@
 ---
 title: "sean pathasema"
 layout: "base.njk"
-tag: nothome
+tag: projects
 ---
 
-      <img class="full-width" src="imgs/538674774.241576-scaled.jpg" alt="flattened 360 image">
-      <!-- full width blog -->
-      {% if collections.about.length %}
-        {# {% include "about.njk" %} #}
-      
-        {%- for about in collections.about -%}
-        <article class="row">
+<img class="full-width" src="imgs/538674774.241576-scaled.jpg" alt="flattened 360 image">
+<!-- full width blog -->
+{% if collections.about.length %}
+  {# {% include "about.njk" %} #}
+  {%- for about in collections.about -%}
+    <article class="row">
+      <a class="section-link" href="{{ about.url }}">
         <h2 class="my-5 section-heading" id="about-heading">{{about.data.title}}</h2>
-        <p>{{about.data.description | safe}}</p>
-        <a href="{{about.url}}">Read More</a>
+      </a>
+      <p>{{about.data.description | safe}}</p>
+      <a href="{{about.url}}">Read More</a>
+    </article>
+  {% endfor %}
+{% endif %}
+<!-- end full width blog -->
+
+<!-- experience section. currently hidden because I'm moving to about page -->
+{# {% if collections.experience.length %} #}
+{# {% include "experience.njk" %} #}
+{# {%endif%} #}
+<!-- end experience section -->
+
+{% set projectUrl = 'projects' %}
+
+<!-- projects section -->
+{% if collections.portfolio.length %}
+ <a class="section-link" href="{{ projectUrl }}">
+  <h2 id="projects-heading" class="my-5 section-heading">Recent Projects</h2>
+  </a>
+  {% for project in collections.portfolio %}
+   <!-- right layout -->
+    {% if project.data.position === "right" %}
+      <div class="row project-block d-flex flex-wrap mb-5">
+        <div class="col-lg-5 col-xl-6 order-md-1">
+          <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
+        </div>
+        <article class="col-lg-7 col-xl-6 order-md-2">
+          <a href="{{project.url}}"><h4>{{ project.data.title }}</h4></a>
+          {{ project.data.content | safe }}
+          <div class="tags">
+            <span class="badge badge-tag mt-2">{{project.data.group}}</span></div>
+            <a href="{{project.url}}">Read More</a>
         </article>
-        {% endfor %}
-
-      {% endif %}
-      <!-- end full width blog -->
-
-      <!-- experience section -->
-      {% if collections.experience.length %}
-        {% include "experience.njk" %}
+      </div>
+      <!-- left layout. section break -->
+      {% else%}
+      <section class="row project-block d-flex flex-wrap mb-5">
+        <article class="col-lg-7 col-xl-6 order-2  order-xl-1">
+          <a href="{{project.url}}"><h4>{{ project.data.title }}</h4></a>
+          {{ project.data.content | safe }}
+          <div class="tags">
+            <span class="badge badge-tag mt-2">{{project.data.group}}</span></div>
+            <a href="{{project.url}}">Read More</a>
+        </article>
+        <div class="col-lg-5 col-xl-6 order-1 order-xl-2">
+          <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
+        </div>
+      </section>
       {%endif%}
-      <!-- end experience section -->
+      
+      {%endfor%}
+  {# {% include "projects.njk" %} #}
+{% endif %}
+<!-- end projects section -->
 
-      <!-- projects section -->
-      {% if collections.portfolio.length %}
-        {% include "projects.njk" %}
-      {% endif %}
-        <!-- end projects section -->
-        
-        <!-- end footer row -->
-        <section class="row">
-          <!-- footer section -->
-          {%include "partials/footer.njk"%}
-          <!-- end footer section -->
-        </section>
-        <!-- end footer row -->
+<!-- end footer row -->
+<section class="row">
+  <!-- footer section -->
+  {%include "partials/footer.njk"%}
+  <!-- end footer section -->
+</section>
+<!-- end footer row -->

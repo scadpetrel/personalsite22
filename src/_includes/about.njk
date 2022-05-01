@@ -4,7 +4,7 @@ layout: "base.njk"
 <article class="row">
 
   {%- for about in collections.about -%}
-    <h2 class="my-5 section-heading" id="about-heading">{{about.data.title}}</h1>
+    <h2 class="mb-5 section-heading" id="about-heading">{{about.data.title}}</h1>
     {{ about.data.content | safe }}
     {%endfor%}
     {# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a risus malesuada, blandit orci non, consectetur velit. Vestibulum gravida mauris dolor, at varius dui accumsan in. Maecenas aliquam accumsan nisi nec scelerisque. Maecenas nec lobortis nisi. Aenean lobortis vitae libero in suscipit. Morbi gravida in erat vel efficitur. Pellentesque porttitor, dui rhoncus elementum ullamcorper, metus tortor ultrices quam, sit amet commodo turpis ex id sem. Donec non ante tempor, porttitor ex sed, hendrerit quam. Integer id sagittis mauris. Quisque euismod enim sed erat aliquam vehicula. Cras suscipit arcu et nisi suscipit elementum in nec libero. In eu fringilla mi, imperdiet consectetur nisi. Aliquam sollicitudin rhoncus erat at egestas. Donec scelerisque nulla et arcu suscipit, nec sagittis massa aliquet. #}
