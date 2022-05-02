@@ -3,35 +3,50 @@ layout: "base.njk"
 ---
 {# <section class="row"> #}
 
-  <h2 id="projects-heading" class="mb-5 section-heading">Projects</h2>
-  {% for project in collections.portfolio %}
-    {% if project.data.position === "right" %}
-      <div class="row project-block d-flex flex-wrap mb-5">
-        <div class="col-lg-5 col-xl-6 order-md-1">
-          <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
-        </div>
-        <article class="col-lg-7 col-xl-6 order-md-2">
-          <a href="{{project.url}}"><h4>{{ project.data.title }}</h4></a>
-          {{ project.data.content | safe }}
-          <div class="tags">
-            <span class="badge badge-tag mt-2">{{project.data.group}}</span></div>
-            <a href="{{project.url}}">Read More</a>
-        </article>
+<h2 id="projects-heading" class="mb-5 section-heading">Projects</h2>
+{% for project in collections.portfolio %}
+  {% if project.data.position === "right" %}
+    <div class="row project-block d-flex flex-wrap mb-5">
+      <div class="col-lg-5 col-xl-6 order-md-1">
+        <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
       </div>
-      <!-- section break -->
-      {% else%}
-      <section class="row project-block d-flex flex-wrap mb-5">
-        <article class="col-lg-7 col-xl-6 order-2  order-xl-1">
-          <a href="{{project.url}}"><h4>{{project.data.group}}</h4></a>
-          {{ project.data.content | safe }}
-          <div class="tags">
-            <span class="badge badge-tag mt-2">{{project.data.group}}</span></div>
-            <a href="{{project.url}}">Read More</a>
-        </article>
-        <div class="col-lg-5 col-xl-6 order-1 order-xl-2">
-          <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
-        </div>
-      </section>
-      {%endif%}
-      {%endfor%}
+      <article class="col-lg-7 col-xl-6 order-md-2">
+        <a class="post-title" href="{{project.url}}">
+          <h4>{{ project.data.title }}</h4>
+        </a>
+        {{ project.data.description | safe }}
+        <div class="card-buttons mt-3 pt-1">
+            <div class="tags">
+              <span class="badge badge-tag mt-2">{{project.data.group}}</span></div>
+            <a class="more-button" href="{{project.url}}">Read More</a>
+          </div>
+      </article>
+    </div>
+    <!-- section break -->
+    {% else%}
+    <section class="row project-block d-flex flex-wrap mb-5">
+      <article class="col-lg-7 col-xl-6 order-2  order-xl-1">
+        <a class="post-title" href="{{project.url}}">
+          <h4>{{project.data.title}}</h4>
+        </a>
+        {{ project.data.description | safe }}
+       <div class="card-buttons mt-3 pt-1">
+            <div class="tags">
+              <span class="badge badge-tag mt-2">{{project.data.group}}</span></div>
+            <a class="more-button" href="{{project.url}}">Read More</a>
+          </div>
+      </article>
+      <div class="col-lg-5 col-xl-6 order-1 order-xl-2">
+        <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
+      </div>
+    </section>
+    {%endif%}
+    {%endfor%}
     {# </section> #}
+    <!-- end footer row -->
+    <section class="row">
+      <!-- footer section -->
+      {%include "partials/footer.njk"%}
+      <!-- end footer section -->
+    </section>
+    <!-- end footer row -->

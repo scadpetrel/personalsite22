@@ -1,3 +1,4 @@
+@import "../variables";
 /* ---- Section Areas - Blog and Experience ---- */
 
 @media (min-width: 1200px) {
@@ -35,10 +36,52 @@
   background-color: rgba(141, 153, 174, 0.4);
 } */
 
-.tags {
-  border-top: 1px solid rgba(141, 153, 174, 0.4);
-}
+// .tags {
+ 
+// }
 
 .full-width {
   width: 100%;
 }
+
+.card-buttons {
+  border-top: 1px solid rgba(141, 153, 174, 0.4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-more {
+  border-top: 1px solid rgba(141, 153, 174, 0.4);
+  display: flex;
+  justify-content: end;
+  width: calc(100% - 24px);
+  padding: 0px;
+  margin: 0px 12px;
+}
+
+.post-title {
+  text-decoration: none;
+  color: #383434;
+}
+
+a.more-button {
+  background-color: $grey;
+  padding: .2rem;
+  border-radius: 3px;
+  color: $light-grey;
+  text-decoration: none;
+  width: auto;
+  // margin-left: 12px;
+  transition: ease-in-out .3s;
+  &:hover {
+    color: $light-grey;
+    background-color: darken($grey, 15);
+    border-radius: 0px;
+  }
+
+
+}
+
+// a.more-button:hover {
+//   color: black
+// }

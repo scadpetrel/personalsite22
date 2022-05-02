@@ -39,13 +39,14 @@
   #page-heading {
     margin-bottom: 3rem;
     margin-right: 1.2rem;
+    padding-left: 1rem;
     // background-color: lightcoral;
   }
 
   #page-name {
     margin-bottom: 3rem;
     // margin-right: 1.2rem;
-    margin-left: 0.9rem;
+    margin-left: 0.6rem;
     box-shadow: inset 0 -1px 0 0 #2b2b2b;
     width: 100%;
   }
@@ -77,6 +78,6 @@
   }
 }
 
-.heading-container a {
+a.heading-name {
   text-decoration: none;
 }
