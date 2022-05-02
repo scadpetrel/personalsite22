@@ -78,10 +78,8 @@ a.more-button {
     background-color: darken($grey, 15);
     border-radius: 0px;
   }
-
-
 }
 
-// a.more-button:hover {
-//   color: black
-// }
+.current-menu {
+  color: lighten($very-dark-blue, 50);
+}

@@ -59,7 +59,12 @@
   color: #383434;
   font-weight: 400;
   padding-left: 1rem;
+
+
+ 
 }
+
+
 
 @media (min-width: 1200px) {
   #page-intro {
@@ -80,4 +85,28 @@
 
 a.heading-name {
   text-decoration: none;
+}
+
+.page-intro-2 {
+  opacity: 0;
+  animation: fadeIn 2.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.page-intro-3 {
+  opacity: 0;
+  animation: fadeIn 2.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.page-intro-4 {
+  opacity: 0;
+  animation: fadeIn 2.5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
