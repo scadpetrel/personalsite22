@@ -1,8 +1,8 @@
+@import "variables";
 @import "layout/footer";
 @import "layout/nav";
 @import "layout/hero";
 @import "layout/content";
-@import "variables";
 @import "layout/buttons";
 /* font-family: 'IBM Plex Sans', sans-serif; */
 
@@ -33,11 +33,9 @@ a:hover {
 a:focus {
   color: $my-red;
 }
-#primary-container.container-fluid {
-  /* max-width: 1450px; */
-  // background-color: #add8e6;
-}
 
+
+// hero text
 h1.display-3 {
   font-weight: 400;
 }

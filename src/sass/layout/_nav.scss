@@ -18,20 +18,29 @@
 .fa-bars {
   color: rgba(0, 0, 0, 0.5);
   font-size: 1.7rem;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  &:hover {
+    color: $light-grey
+  }
 }
 
 #fontbutton.navbar-toggler {
-  background-color: rgba(0, 0, 0, 0.09);
+  // background-color: rgba(0, 0, 0, 0.09);
+  background-color: $light-grey;
   /* border: 1px solid #d90429ff; */
-  border: none;
+  border: $line;
   border-radius: 0%;
-  margin-left: -2px; /* slight visual align */
+  margin-left: -2px;
+  padding: 0px; /* slight visual align */
 }
 
 #fontbutton.navbar-toggler:hover {
   /* background-color: #ef233cff; */
-  background-color: rgba(0, 0, 0, 0.5);
-
+  // background-color: rgba(0, 0, 0, 0.5);
+  background-color: $grey;
+  // color: $light-grey
   transition: .5s ease-in-out;
 }
 #fontbutton.navbar-toggler:focus {
