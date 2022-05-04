@@ -16,10 +16,9 @@
 }
 
 /* would be nice if hover would work on boder box beginning at margin */
-.section-link  {
+.section-link {
   text-decoration: none;
 
-  
   .section-heading {
     margin-left: 0px;
   }
@@ -37,26 +36,20 @@
 } */
 
 // .tags {
- 
+
 // }
 
 .full-width {
   width: 100%;
 }
 
-.card-buttons {
-  border-top: 1px solid rgba(141, 153, 174, 0.4);
+.pagination-links {
   display: flex;
   justify-content: space-between;
 }
 
-.article-more {
-  border-top: 1px solid rgba(141, 153, 174, 0.4);
-  display: flex;
-  justify-content: end;
-  width: calc(100% - 24px);
-  padding: 0px;
-  margin: 0px 12px;
+.current-menu {
+  color: lighten($very-dark-blue, 50);
 }
 
 .post-title {
@@ -64,22 +57,12 @@
   color: #383434;
 }
 
-a.more-button {
-  background-color: $grey;
-  padding: .2rem;
-  border-radius: 3px;
-  color: $light-grey;
-  text-decoration: none;
-  width: auto;
-  // margin-left: 12px;
-  transition: ease-in-out .3s;
-  &:hover {
-    color: $light-grey;
-    background-color: darken($grey, 15);
-    border-radius: 0px;
-  }
+.subheading-small {
+  font-size: 0.7rem;
 }
 
-.current-menu {
-  color: lighten($very-dark-blue, 50);
+// resume block styles
+#experience-content {
+  border-left: 1px solid rgba(141, 153, 174, 0.4);
+  border-top: 1px solid rgba(141, 153, 174, 0.4);
 }

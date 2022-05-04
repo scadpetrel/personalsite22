@@ -8,11 +8,12 @@
         <strong>{{ experience.data.title }}</strong>
       </p>
       <p class="text-lg-end text-muted">{{ experience.data.subheading }}</p>
+      <p class="text-lg-end text-muted">{{ experience.data.dates }}</p>
     </div>
     <div class="col-lg-7 col-xl-6">
       {{ experience.data.content | safe }}
     </div>
 
   {% endfor %}
-
+  
 </article>

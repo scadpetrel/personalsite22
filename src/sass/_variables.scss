@@ -1,10 +1,34 @@
-// colors 
-$light-grey: #edf2f4ff;
+// colors
+$light-grey: #edf2f4;
 $light-blue: #add8e6;
 $grey: #8d99ae;
 $dark-grey: #383434;
 $very-dark-blue: #2b2d42;
+$ligter-red: #ef233c;
 $my-red: #d90429;
+// there is another red
 
 // fonts
-$font-stack: 'IBM Plex Sans', sans-serif;
+$font-stack: "IBM Plex Sans", sans-serif;
+
+// mixin
+@mixin button {
+  background-color: $grey;
+  padding: 0.2rem;
+  border-radius: 3px;
+  color: $light-grey;
+  text-decoration: none;
+  transition: ease-in-out 0.3s;
+}
+
+@mixin button-hover {
+  color: $light-grey;
+  background-color: darken($grey, 15);
+  border-radius: 0px;
+}
+
+@mixin button-focus {
+  color: $light-grey;
+}
+
+

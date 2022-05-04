@@ -1,7 +1,30 @@
 ---
 layout: base.njk
+
 ---
 <body>
   <h1>{{ title }}</h1>
-{{content | safe}}
+  {{content | safe}}
+  <!-- set pagination. removed {{ previousPost.data.title }} from link text -->
+  {% set previousPost = collections.portfolio | getPreviousCollectionItem(page) %}
+  {% set nextPost = collections.portfolio | getNextCollectionItem(page) %}
+  <div class="pagination-links mt-5">
+    <div class="page-previous">
+    {% if previousPost %}
+      <a href="{{ previousPost.url }}">← Previous Project</a>
+    {% endif %}
+    </div>
+    <div class="page-next">
+    {% if nextPost %}
+      <a href="{{ nextPost.url }}">Next Project →</a>
+    {% endif %}
+    </div>
+  </div>
+  <!-- end footer row -->
+  <section <section class="row footer-block">
+      <!-- footer section -->
+      {%include "partials/footer.njk"%}
+      <!-- end footer section -->
+    </section>
+    <!-- end footer row -->
 </body>

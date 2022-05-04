@@ -3,15 +3,14 @@
 @import "layout/hero";
 @import "layout/content";
 @import "variables";
+@import "layout/buttons";
 /* font-family: 'IBM Plex Sans', sans-serif; */
 
 
 /* ---- Base Styles ---- */
-/* #limit {
-  max-width: 1700px;
-} */
+
 html {
-  background-color: #edf2f4ff;
+  // background-color: #edf2f4ff;
   font-family: 'IBM Plex Sans', sans-serif;
   scroll-behavior: auto;
 }
@@ -24,41 +23,19 @@ body {
 a {
   color: #383434;
   text-decoration: underline;
-  text-decoration-color: #d90429ff;
+  text-decoration-color: $my-red;
 }
 
 a:hover {
-  color: #d90429ff;
+  color: $my-red;
 }
 
 a:focus {
-  color: #ef233cff;;
+  color: $my-red;
 }
 #primary-container.container-fluid {
   /* max-width: 1450px; */
-  background-color: #add8e6;
-}
-
-.heading-button, .btn-outline-primary {
-  border-color: #d90429ff;
-  color: #d90429ff;
-}
-
-.heading-button:hover, .btn-outline-primary:hover {
-  background-color: #ef233cff;
-  transition: .6s;
-}
-
-.btn-outline-primary:focus {
-    border: 0;
-    box-shadow: 0 0 0 0.25rem #2b2d42;
-  }
-
-.badge-tag {
-  // background-color: #8d99aeff;
-  color: lighten($dark-grey, 30);
-  border-radius: 0%;
-  padding: 0;
+  // background-color: #add8e6;
 }
 
 h1.display-3 {
