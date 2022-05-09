@@ -8,7 +8,7 @@ layout: "base.njk"
   {% if project.data.position === "right" %}
     <div class="row project-block d-flex flex-wrap mb-5">
       <div class="col-lg-5 col-xl-6 order-md-1">
-        <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
+        <img class="img-fluid mb-sm-4 project-feature" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
       </div>
       <article class="col-lg-7 col-xl-6 order-md-2">
         <a class="post-title" href="{{project.url}}">
@@ -37,7 +37,7 @@ layout: "base.njk"
           </div>
       </article>
       <div class="col-lg-5 col-xl-6 order-1 order-xl-2">
-        <img class="img-fluid mb-sm-4" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
+        <img class="img-fluid mb-sm-4 project-feature" src="/imgs/{{ project.data.image }}" alt="{{ post.data.imageAlt }}"/>
       </div>
     </section>
     {%endif%}

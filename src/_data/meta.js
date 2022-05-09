@@ -1,7 +1,7 @@
 module.exports = {
   siteName: "Sean Pathasema",
   siteDescription: "A web developer based in Birmingham, Alabama.",
-  siteHero: "I have 15 years experience planning, developing, and managing websites and web applications. I am currently the Director of Systems and Web at the Birmingham Museum of Art, where I manage the entire development process from the idea phase thorough deployment and management.",
+  siteHero: "Experienced developer with an expertise in taking projects from ideation to launch. Strong understanding of user experience and customer journey. Proficient in HTML, CSS, JavaScript, WordPress, wireframing, prototyping, photography, and video editing.",
   authorName: "Sean Pathasema"
 
 };
